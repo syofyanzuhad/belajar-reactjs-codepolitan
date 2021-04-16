@@ -11,6 +11,9 @@ class App extends Component {
       namaResto: 'Codepolitan'
     }
   }
+  handleGantiNama = (nama) => {
+      this.setState({ namaResto: nama})
+  }
   render() {
     return (
       <div className="App">
@@ -22,6 +25,8 @@ class App extends Component {
         <h2>Menu Minuman</h2>
         <MenuMinuman namaMenu={"Juice Melon"} hargaMenu={"15000"} />
         <MenuMinuman namaMenu={"Milkshake Strawberry"} hargaMenu={"20000"} />
+        <button onClick={() => this.handleGantiNama('Cipedes')}>Ganti Nama Resto</button>
+
       </div>
     );
   }
